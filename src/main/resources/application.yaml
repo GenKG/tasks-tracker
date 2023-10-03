@@ -5,13 +5,13 @@ spring:
   datasource:
     driver-class-name: org.postgresql.Driver
     url: ${TRACKER_DB_URL:jdbc:postgresql://172.17.0.1:5432/task_tracker}
-    username: ${TRACKER_DB_USER:}
-    password: ${TRACKER_DB_PASSWORD:}
+    username: ${TRACKER_DB_USER:user}
+    password: ${TRACKER_DB_PASSWORD:password}
   flyway:
     baseline-on-migrate: true
     default-schema: ${TRACKER_DEFAULT_SCHEMA:tracker}
     schemas: ${TRACKER_MANAGE_SCHEMA:tracker}
-    clean-on-validation-error: ${TRACKER_CLEAN_VALIDATION_ERROR:true}
+    clean-on-validation-error: ${TRACKER_CLEAN_VALIDATION_ERROR:false}
   jpa:
     properties:
       hibernate:
